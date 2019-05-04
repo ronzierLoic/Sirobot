@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ParametersActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/activity_parameters_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <TextView
+        android:id="@+id/titre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/parameters_title"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activity_parameters_toolbar" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/actitvity_parameters_view_sirop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/actitvity_parameters_view_water"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titre">
+
+        <Button
+            android:id="@+id/actitvity_parameters_button_sirop_way"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/button_not_select"
+            android:text="@string/parameters_button_way"
+            app:layout_constraintEnd_toStartOf="@+id/actitvity_parameters_button_sirop_lot"
+            app:layout_constraintStart_toEndOf="@+id/actitvity_parameters_button_sirop_little"
+            app:layout_constraintTop_toTopOf="@+id/actitvity_parameters_button_sirop_little" />
+
+        <Button
+            android:id="@+id/actitvity_parameters_button_sirop_lot"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/button_not_select"
+            android:text="@string/parameters_button_lot"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/actitvity_parameters_button_sirop_way"
+            app:layout_constraintTop_toTopOf="@+id/actitvity_parameters_button_sirop_way" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/parameters_title_sirop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/actitvity_parameters_button_sirop_little"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/button_not_select"
+            android:text="@string/parameters_button_litle"
+            app:layout_constraintEnd_toStartOf="@+id/actitvity_parameters_button_sirop_way"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/actitvity_parameters_view_water"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/activity_parameters_button_service"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/actitvity_parameters_view_sirop">
+
+        <Button
+            android:id="@+id/actitvity_parameters_button_water_way"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/button_not_select"
+            android:text="@string/parameters_button_way"
+            app:layout_constraintEnd_toStartOf="@+id/actitvity_parameters_button_water_lot"
+            app:layout_constraintStart_toEndOf="@+id/actitvity_parameters_button_water_little"
+            app:layout_constraintTop_toTopOf="@+id/actitvity_parameters_button_water_little" />
+
+        <Button
+            android:id="@+id/actitvity_parameters_button_water_lot"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/button_not_select"
+            android:text="@string/parameters_button_lot"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/actitvity_parameters_button_water_way"
+            app:layout_constraintTop_toTopOf="@+id/actitvity_parameters_button_water_way" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="0dp"
+            android:layout_height="23dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/parameters_title_water"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/actitvity_parameters_button_water_little"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/button_not_select"
+            android:text="@string/parameters_button_litle"
+            app:layout_constraintEnd_toStartOf="@+id/actitvity_parameters_button_water_way"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+    </android.support.constraint.ConstraintLayout>
+
+    <Button
+        android:id="@+id/activity_parameters_button_service"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_not_select"
+        android:text="@string/parameters_button_service"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

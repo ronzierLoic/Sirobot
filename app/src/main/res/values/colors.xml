@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorPrimary">#850200</color>
+    <color name="colorPrimaryDark">#570001</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="buttonNotSelect">#BABABA</color>
+    <color name="buttonNotSelectGradient">#E2E2E2</color>
+    <color name="buttonSelected">#b9261f</color>
+    <color name="buttonSelectClick">#ff352b</color>
+    <color name="buttonNotSelectClick">#E2E2E2</color>
+    <color name="buttonSelect">#b9261f</color>
+
 </resources>

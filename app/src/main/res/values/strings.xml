@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">Sirobot_app</string>
     <string name="sirobot">SiroBot</string>
+    <string name="parameters_button_litle">Un peu</string>
+    <string name="parameters_button_way">Moyen</string>
+    <string name="parameters_button_lot">Beaucoup</string>
+    <string name="parameters_title_sirop">Dosage du sirop</string>
+    <string name="parameters_title_water">Dosage de l\'eau</string>
+    <string name="parameters_title">Paramétré le dosage</string>
+    <string name="parameters_button_service">Servir</string>
+    <string name="activity_main_loading">En cours de connexion...</string>
+    <string name="grenadine">Grenadine</string>
+    <string name="grenadine_eau">Grenadine + Eau</string>
+    <string name="eau">Eau</string>
 </resources>
