@@ -15,29 +15,31 @@ import com.clj.fastble.scan.BleScanRuleConfig
 
 class BLEManager {
 
-    private lateinit var foundDevice: BleDevice
+    private var foundDevice: BleDevice? = null
     var bleConnect = MutableLiveData<Boolean>()
 
     fun initBLE(app: Application) {
-        BleManager.getInstance().init(app)
+        if(foundDevice == null) {
+            BleManager.getInstance().init(app)
 
-        val scanRuleConfig = BleScanRuleConfig.Builder()
-                .setDeviceMac("F0:30:D5:4A:18:A2")
-                .setScanTimeOut(10000)
-                .build()
+            val scanRuleConfig = BleScanRuleConfig.Builder()
+                    .setDeviceMac("F0:30:D5:4A:18:A2")
+                    .setScanTimeOut(10000)
+                    .build()
 
-        BleManager.getInstance().initScanRule(scanRuleConfig)
+            BleManager.getInstance().initScanRule(scanRuleConfig)
 
-        BleManager.getInstance()
-                .enableLog(true)
-                .setReConnectCount(1, 5000)
-                .setSplitWriteNum(20)
-                .setConnectOverTime(10000)
-                .setOperateTimeout(5000)
+            BleManager.getInstance()
+                    .enableLog(true)
+                    .setReConnectCount(1, 5000)
+                    .setSplitWriteNum(20)
+                    .setConnectOverTime(10000)
+                    .setOperateTimeout(5000)
 
 
 
-        BleManager.getInstance().scan(scanCallback)
+            BleManager.getInstance().scan(scanCallback)
+        }
     }
 
     private val scanCallback = object : BleScanCallback() {
@@ -78,10 +80,12 @@ class BLEManager {
                 Log.d("BLEConnectActivity", "Connection Succeeded ! Status: $status")
                 Log.d("BLEConnectActivity", "Connecter!!")
                 foundDevice = bleDevice
+                bleConnect.postValue(true)
             }
 
             override fun onDisConnected(isActiveDisConnected: Boolean, bleDevice: BleDevice, gatt: BluetoothGatt, status: Int) {
                 Log.d("BLEConnectActivity", "Device disconnected... Status: $status")
+                foundDevice = null
             }
         })
     }
